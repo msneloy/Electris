@@ -20,8 +20,8 @@ const videoElement = document.querySelector('video');
 const startBtn = document.getElementById('startBtn');
 startBtn.onclick = e => {
   mediaRecorder.start();
-  startBtn.classList.add('is-danger');
-  startBtn.innerText = 'Recording';
+  startBtn.classList.add('is-warning');
+  startBtn.innerText = 'Capturing';
 };
 
 const stopBtn = document.getElementById('stopBtn');
