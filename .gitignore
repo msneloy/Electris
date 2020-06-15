@@ -1,2 +1,3 @@
 APP/node_modules
-APP/out
+APP/out/make
+APP/out/app-win32-x64
