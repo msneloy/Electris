@@ -1,10 +1,7 @@
-const {
-  app,
-  BrowserWindow
-} = require('electron');
-const path = require('path');
+const { app, BrowserWindow } = require("electron");
+const path = require("path");
 //electron filesystem access
-if (require('electron-squirrel-startup')) {
+if (require("electron-squirrel-startup")) {
   app.quit();
 }
 //package markup
@@ -14,24 +11,23 @@ const createWindow = () => {
     width: 700,
     height: 700,
     webPreferences: {
-      nodeIntegration: true //node.js access
-    }
+      nodeIntegration: true, //node.js access
+    },
   });
-  mainWindow.setMenuBarVisibility(false) //hiding the menu bar
-  mainWindow.loadFile(path.join(__dirname, 'index.html')); //template engine loader
-
+  mainWindow.setMenuBarVisibility(false); //hiding the menu bar
+  mainWindow.loadFile(path.join(__dirname, "index.html")); //template engine loader
 };
 
-app.on('ready', createWindow);
+app.on("ready", createWindow);
 //main menu function
-app.on('window-all-closed', () => {
+app.on("window-all-closed", () => {
   //killswitch
-  if (process.platform !== 'darwin') {
+  if (process.platform !== "darwin") {
     app.quit();
   }
 });
 
-app.on('activate', () => {
+app.on("activate", () => {
   //startup
   if (BrowserWindow.getAllWindows().length === 0) {
     createWindow();

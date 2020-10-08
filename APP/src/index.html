@@ -1,38 +1,37 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Electris Recorder- Team 01 SE Prototype - 20170021</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <title>Electris Recorder- Team 01 SE Prototype - 20170021</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css"
+    />
+    <script defer src="render.js"></script>
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css" />
-  <script defer src="render.js"></script>
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        padding-top: 20px;
+      }
 
-  <style>
-    body {
-      padding: 0;
-      margin: 0;
-      text-align: center;
-      padding-top: 20px;
-    }
+      video {
+        width: 100%;
+        height: auto;
+      }
+    </style>
+  </head>
+  <h1>Please select a Video Source</h1>
 
-    video {
-      width: 100%;
-      height: auto;
-    }
-  </style>
-
-</head>
-<h1>Please select a Video Source</h1>
-
-<body class="content">
-  <button id="videoSelectBtn" class="button is-info">Source</button>
-  <button id="startBtn" class="button is-primary">Start</button>
-  <button id="stopBtn" class="button is-danger">Stop</button>
-  <hr />
-  <video></video>
-  <hr />
-
-</body>
-
+  <body class="content">
+    <button id="videoSelectBtn" class="button is-info">Source</button>
+    <button id="startBtn" class="button is-primary">Start</button>
+    <button id="stopBtn" class="button is-danger">Stop</button>
+    <hr />
+    <video></video>
+    <hr />
+  </body>
 </html>
